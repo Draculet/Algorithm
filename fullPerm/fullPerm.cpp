@@ -39,4 +39,14 @@ int main(void)
     vector<char> v = {'A', 'B', 'C', 'D'};
     perm(v, 0);
     cout << "Total count " << count << endl;
+    cout << endl;
+    string str;
+    cin >> str;
+    vector<char> v1;
+    for (int i = 0; i < str.size(); i++)
+    {
+        v1.push_back(str[i]);
+    }
+    perm(v1, 0);
+    //cout << "Total count " << count << endl;
 }

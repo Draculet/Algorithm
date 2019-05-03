@@ -25,9 +25,7 @@ int numDiv(int goal)
                 v[i][j] += v[i - k][min(i-k, k)];
         }
     }
-    cout << v[5][4] << endl;
-    cout << v[5][3] << endl;
-    cout << v[5][2] << endl;
+
     
     return v[goal][goal];
 }
