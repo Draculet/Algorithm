@@ -2,7 +2,7 @@
 #include <vector>
 
 using namespace std;
-
+//O(n^2)
 int main(void)
 {
 	int n;
@@ -24,11 +24,12 @@ int main(void)
 		for (int j = 1; j < i; j++)
 		{
 			if (arr[j] <= arr[i])
+			//每遇到一个小于本位数的数就更新最大子序列长度
 				vec[i] = max(vec[i], vec[j] + 1);
 		}
 	}
-	int maxn = -1;
-	int maxpos = -1;
+	int maxn = -1;//记录最大子序列的长度
+	int maxpos = -1;//记录最大子序列的最后一个元素位置
 	for (int i = n; i >= 1; i--)
 	{
 		if (vec[i] > maxn)
@@ -43,7 +44,6 @@ int main(void)
 	--maxn;
 	while (maxn >= 1)
 	{
-		int before = maxpos;
 		cout << arr[maxpos] << endl;
 		for (int i = arr.size(); i >=1; i--)
 		{
