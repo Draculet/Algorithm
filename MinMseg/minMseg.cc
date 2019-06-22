@@ -4,6 +4,8 @@ using namespace std;
 
 int main(void)
 {
+	while(1)
+	{
 	vector<int> arr;
 	int row, col, num;
 	cin >> row; //n个数
@@ -40,6 +42,7 @@ int main(void)
 			cout << "vec" << i << " " <<  j  << " " <<  min << endl;
 		}	
 	}
-	cout << "Result: " << vec[row][col];
+	cout << "Result: " << vec[row][col] << endl;
+	}
 	return 0;
 }

@@ -19,7 +19,7 @@ int main(void)
 			if (num.size() >= size - n)
 			{
 				res = string(num.c_str(), size - dn);
-				cout << res << endl;
+				cout << "删除" << dn << "个数后的结果为" << res << endl;
 				return 0;
 			}
 			else
@@ -44,7 +44,7 @@ int main(void)
 			//减的位数达到目标
 			{
 				res = num;
-				cout << res << endl;
+				cout << "删除" << dn << "个数后的结果为" << res << endl;
 				return 0;
 			}
 			i-=2;

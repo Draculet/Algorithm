@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 int main(void)
@@ -16,6 +17,7 @@ int main(void)
 		cin >> tmp;
 		vec[i] = tmp;
 	}
+	sort(vec.begin(), vec.end());
 	vector<int> service[s];
 	vector<int> sum;
 	for (int i = 0; i < s; i++)
@@ -30,8 +32,8 @@ int main(void)
 		sum[i / s] += service[i % s][i / s];
 		if ((i % s == s - 1 && i / s != 0) || i == n - 1)
 		{
+			//cout << "here" << sum[i / s] << endl;
 			sum[i / s] += sum[i / s - 1];
-			cout << "here" << sum[i / s] << endl;
 		}
 	}
 	i--;

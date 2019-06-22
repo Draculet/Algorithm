@@ -22,9 +22,9 @@ int main(void)
 		while ((x[k] <= n) && !place(k, x))
 			x[k]++;
 			
-		//if (x[k] > n)
-		//	k--;//回溯
-		if (x[k] <= n)
+		if (x[k] > n)
+			k--;//回溯
+		else
 		{
 			if (k == n)
 				sum++;
@@ -34,8 +34,6 @@ int main(void)
 				x[k] = 0;//列数置0,由新0列开始
 			}
 		}
-		else
-			k--;
 	}
 	cout << n << "皇后问题有" << sum << "种解法"<< endl;
 	}
